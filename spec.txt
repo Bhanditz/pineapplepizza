@@ -1,0 +1,39 @@
+# Title
+
+or
+
+Title
+=====
+
+Correspondences:
+
+Document title = name of data
+
+Heading 2/3/4/5/6 = structured collection type, embedded in a higher structure
+
+Structured collection has:
+Name
+Heading level
+headings: key -> heading level + 1 structured collection with name = key
+lists: 
+text:
+
+StructuredListItem
+  title
+
+StructuredCollection level
+  level: Int
+  name: Text
+  text: Text
+  lists: [StructuredListItem]
+  headings: Map Text (StructuredCollection (level+1))
+
+A heading that has a lower level than the heading level closes collections
+down to the correct level.
+
+Formatting as such
+links
+images
+emphasis
+
+
