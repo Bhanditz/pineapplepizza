@@ -19,7 +19,8 @@ lists:
 text:
 
 StructuredListItem
-  title
+  title/key
+  kv: Map Text Text
 
 StructuredCollection level
   level: Int
